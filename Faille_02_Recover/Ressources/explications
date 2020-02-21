@@ -1,0 +1,12 @@
+Faille:
+
+Aller sur l'url IP//?page=recover
+Ouvrez la console puis aller dans element, puis trouver le input hidden, vous verrez une valeur deja mise. Changez la et vous trouverez le flag.
+
+Raison de la faille:
+
+Mettre une valeur en dur comme ca est tres dangereux car n'importe qui peux la changer par n'importe quoi, la dans ce cas, nous avons juste a remplacer par notre propre adresse mail et nous pouvons obtenir le mot de passe de la personne.
+
+Comment corriger la faille:
+
+Mettre un input type text et laissez l'utilisateur tapez sa propre adresse mail.

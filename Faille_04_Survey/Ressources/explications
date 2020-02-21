@@ -1,0 +1,19 @@
+Faille:
+
+Il faut ouvrir la console, aller dans l'onglet element, puis jusqu'au select, changer une value par un gros chiffre puis la selectionner sur la page. Le flag apparaitra.
+
+Raison de la faille:
+
+Ici, en regardant la page html, tout ce que nous avons est javascript:this.form.submit() sans controle apparant, ni script etc. Ce qui est assez dangereux et ouvert a des failles XSS
+
+Comment corriger la faille:
+
+Pour la corriger, ceci est assez simple. Nous pouvons faire comme ceci:
+
+if (value > 0 && value < 11) {
+	// Do something
+} else {
+	// Error
+}
+
+De cette facon, nous faisons un petit controle sur les valeurs recus.

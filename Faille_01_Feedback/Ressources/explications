@@ -1,0 +1,9 @@
+Faille:
+
+Ecrire script dans l'input name ou message et la faille appraitra
+
+Raison de la faille:
+
+La je ne saisis pas vraiment la faille car normalement il faut mettre les balises script pour qu'une faille XSS apparaissent, donc j'imagine qu'il doit y avoir une regex qui detecte
+
+Comment corriger la faille:

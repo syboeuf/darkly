@@ -1,0 +1,11 @@
+Faille:
+
+En regardant le cookie, j'ai vu le nom I_am_admin puis une chaine de caractere. Il suffit de le decoder pour voir que cela fait false. Nous hasons donc true et remplacons par cette valeur et le flag aparait.
+
+Raison de la faille:
+
+Le nom du cookie nous indique que l'admnistrateur est vrai ou faux. Bien que le fasle est hash.
+
+Comment resoudre la faille:
+
+C'est assez simple, il suffit d'appeller le cookie, par exemple, token, puis de mettre plusieurs valeurs (username, admin, etc ...) a l'interieur avec un hash. 
